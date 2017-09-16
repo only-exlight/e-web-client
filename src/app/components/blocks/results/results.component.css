@@ -1,0 +1,8 @@
+#results {
+    margin: 10px 0;
+    height: calc(100% - 184px);
+    display: flex;
+    padding: 10px 10px;
+    background: #fff;
+    box-shadow: 0 0 10px #888;
+}

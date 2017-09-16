@@ -1,0 +1,10 @@
+<div id="container">
+  <app-left-menu (resizeEvent)="proverka($event)"></app-left-menu>
+  <app-viewer [hiden]="hiden"></app-viewer>
+  <div id="content">
+    <app-search-menu></app-search-menu>
+    <app-navigator></app-navigator>
+    <app-results></app-results>
+    <app-footer></app-footer>
+  </div>
+</div>

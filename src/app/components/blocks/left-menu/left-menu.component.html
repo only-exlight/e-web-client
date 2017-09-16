@@ -1,0 +1,82 @@
+<div id="left-menu">
+  <div class="left-menu-item">
+    <div class="vert-line red-b"></div>
+    <div class="left-menu-icon" title="Профиль">
+      <a (click)="resize(0)" [routerLink]="['/main', {outlets :{viewer :['profile']}}]" routerLinkActive #profile="routerLinkActive" [ngClass]="{'red-t':profile.isActive, 'red-t-h':!profile.isActive}">
+        <i class="fa fa-user" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+  <div class="left-menu-item">
+    <div class="vert-line deep-orange-b"></div>
+    <div class="left-menu-icon" title="Контакты">
+      <a (click)="resize(1)" [routerLink]="['/main',{outlets:{viewer:['contacts']}}]" routerLinkActive #contacts="routerLinkActive" [ngClass]="{'deep-orange-t':contacts.isActive, 'deep-orange-t-h':!contacts.isActive}">
+        <i class="fa fa-address-book" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+  <div class="left-menu-item">
+    <div class="vert-line amber-b"></div>
+    <div class="left-menu-icon shake" title="Сообщения">
+      <a (click)="resize(2)" [routerLink]="['/main',{outlets:{viewer:['messages']}}]" routerLinkActive #messages="routerLinkActive" [ngClass]="{'amber-t':messages.isActive, 'amber-t-h':!messages.isActive}">
+        <i class="fa fa-commenting" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+  <div class="left-menu-item">
+    <div class="vert-line yellow-b"></div>
+    <div class="left-menu-icon" title="Чаты">
+      <a (click)="resize(3)" [routerLink]="['/main', {outlets: {viewer: ['chats']}}]" routerLinkActive #chats="routerLinkActive" [ngClass]="{'yellow-t':chats.isActive,'yellow-t-h':!chats.isActive}">
+        <i class="fa fa-comments" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+  <div class="left-menu-item">
+    <div class="vert-line light-green-b"></div>
+    <div class="left-menu-icon" title="Группы">
+      <a (click)="resize(4)" [routerLink]="['/main', {outlets: {viewer: ['groups'] }}]" routerLinkActive #groups="routerLinkActive" [ngClass]="{'light-green-t':groups.isActive,'light-green-t-h':!groups.isActive}">
+        <i class="fa fa-users" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+  <div class="left-menu-item">
+    <div class="vert-line green-b"></div>
+    <div class="left-menu-icon" title="Проекты">
+      <a (click)="resize(5)" [routerLink]="['/main', {outlets: {viewer: ['projects'] }}]" routerLinkActive #projects="routerLinkActive" [ngClass]="{'green-t':projects.isActive,'green-t-h':!projects.isActive}">
+        <i class="fa fa-flask" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+  <div class="left-menu-item" title="Мероприятия">
+    <div class="vert-line blue-b"></div>
+    <div class="left-menu-icon">
+      <a (click)="resize(6)" [routerLink]="['/main', {outlets: {viewer: ['events'] }}]" routerLinkActive #events="routerLinkActive" [ngClass]="{'blue-t':events.isActive,'blue-t-h':!events.isActive}">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+  <div class="left-menu-item">
+    <div class="vert-line indigo-b"></div>
+    <div class="left-menu-icon" (click)="resize(7)" title="События">
+      <a [routerLink]="['/main', {outlets: {viewer: ['incidents'] }}]" routerLinkActive #incidents="routerLinkActive" [ngClass]="{'indigo-t':incidents.isActive,'indigo-t-h':!incidents.isActive}">
+        <i class="fa fa-flag" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+  <div class="left-menu-item">
+    <div class="vert-line deep-purple-b"></div>
+    <div class="left-menu-icon" (click)="resize(8)" title="Настройки">
+      <a [routerLink]="['/main', {outlets: {viewer: ['settings'] }}]" routerLinkActive #settings="routerLinkActive" [ngClass]="{'deep-purple-t':settings.isActive, 'deep-purple-t-h':!settings.isActive}">
+        <i class="fa fa-cogs" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+  <div class="left-menu-item">
+    <div class="vert-line purple-b"></div>
+    <div class="left-menu-icon purple-t-h" title="Выход">
+      <a>
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>

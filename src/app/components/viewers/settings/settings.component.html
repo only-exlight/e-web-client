@@ -1,0 +1,20 @@
+<div class="viewer-container">
+  <div class="head">
+    <div>
+      <span>Настройки</span>
+      <div class="line line-active deep-purple-b"></div>
+    </div>
+  </div>
+
+  <div class="viewer-menu">
+    <div class="but">
+      <a [routerLink]="['/main',{outlets:{viewer:['settings',{outlets:{settings_outlet:['general']}}]}}]" routerLinkActive #general="routerLinkActive">Основные</a>
+      <div class="line blue-b" [ngClass]="{ 'line-active': general.isActive }"></div>
+    </div>
+    <div class="but">
+      <a [routerLink]="['/main',{outlets:{viewer:['settings',{outlets:{settings_outlet:['notice']}}]}}]" routerLinkActive #notice="routerLinkActive">Уведомления</a>
+      <div class="line green-b" [ngClass]="{ 'line-active': notice.isActive }"></div>
+    </div>
+  </div>
+  <router-outlet name="settings_outlet"></router-outlet>
+</div>

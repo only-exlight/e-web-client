@@ -1,0 +1,25 @@
+<div class="viewer-container">
+  <div class="head">
+    <div>
+      <span>Проекты</span>
+      <div class="line line-active green-b"></div>
+    </div>
+  </div>
+
+  <div class="viewer-menu">
+    <div class="but" >
+      <a [routerLink]="['/main',{outlets:{viewer:['projects',{outlets:{project_outlet:['all']}}]}}]" routerLinkActive #all="routerLinkActive">Все</a>
+      <div class="line blue-b" [ngClass]="{'line-active':all.isActive}"></div>
+    </div>
+    <div class="but">
+      <a [routerLink]="['/main',{outlets:{viewer:['projects',{outlets:{project_outlet:['my']}}]}}]" routerLinkActive #my="routerLinkActive">Мои проекты</a>
+      <div class="line green-b" [ngClass]="{'line-active':my.isActive}"></div>
+    </div>
+    <div class="but">
+      <a [routerLink]="['/main',{outlets:{viewer:['projects',{outlets:{project_outlet:['create']}}]}}]" routerLinkActive #create="routerLinkActive">Создать проект</a>
+      <div class="line purple-b" [ngClass]="{'line-active':create.isActive}"></div>
+    </div>
+  </div>
+
+  <router-outlet name="project_outlet"></router-outlet>
+</div>

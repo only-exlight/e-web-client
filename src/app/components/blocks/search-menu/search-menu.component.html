@@ -1,0 +1,26 @@
+<div id="search-menu">
+  <div class="search">
+    <input type="text" placeholder="Поиск по интересам" id="search">
+    <div class="line red-b"></div>
+  </div>
+  <div class="but" (click)="search()">
+    <span><i class="fa fa-search" aria-hidden="true"></i> Поиск</span>
+    <div class="line deep-orange-b"></div>
+  </div>
+  <div class="but" (click)="piopleSwicher()">
+    <span><i class="fa fa-user" aria-hidden="true"></i> Люди</span>
+    <div class="line yellow-b" [ngClass]="{'line-active': pioples}"></div>
+  </div>
+  <div class="but" (click)="eventsSwicher()">
+    <span><i class="fa fa-calendar" aria-hidden="true"></i> Мероприятия</span>
+    <div class="line green-b" [ngClass]="{'line-active': events}"></div>
+  </div>
+  <div class="but" (click)="groupsSwicher()">
+    <span><i class="fa fa-users" aria-hidden="true"></i> Группы</span>
+    <div class="line indigo-b" [ngClass]="{'line-active': groups}"></div>
+  </div>
+  <div class="but" (click)="projectsSwicher()">
+    <span><i class="fa fa-flask" aria-hidden="true"></i> Проекты</span>
+    <div class="line purple-b" [ngClass]="{'line-active': projects}"></div>
+  </div>
+</div>

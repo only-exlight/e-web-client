@@ -1,0 +1,113 @@
+<div id="login-container">
+  <div id="slider-navigator" class="light-green-b"></div>
+  <div id="form">
+    <div id="form-head">
+      <h1 *ngIf="swicher">С возвращением!</h1>
+      <h1 *ngIf="!swicher">Добро пожаловать!</h1>
+    </div>
+    <hr>
+    <div id="menu">
+      <div class="but" (click)="swichMod(true)">
+        <span>Вход</span>
+        <div class="line green-b" [ngClass]="{ 'line-active': swicher }"></div>
+      </div>
+      <div class="but" (click)="swichMod(false)">
+        <span>Регистрация</span>
+        <div class="line blue-b" [ngClass]="{ 'line-active': !swicher }"></div>
+      </div>
+    </div>
+
+    <form id="login-form" action="" *ngIf="swicher" (ngSubmit)="login()">
+      <div class="row">
+        <div class="col">
+          <span>E-mail</span>
+        </div>
+
+        <div class="col">
+          <input type="email" placeholder="e-mail">
+          <div class="line-active green-b"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <span>Пароль</span>
+        </div>
+
+        <div class="col">
+          <input type="password" placeholder="пароль">
+          <div class="line-active green-b"></div>
+        </div>
+      </div>
+
+      <div class="col-max">
+        <label for="login-submit">
+        <div class="but">
+          <span>Войти</span>
+          <div class="line purple-b"></div>
+        </div>
+        </label>
+      </div>
+      <button type="submit" id="login-submit"></button>
+    </form>
+
+    <form id="registration-form" action="" *ngIf="!swicher" (ngSubmit)="registration()">
+      <div class="row">
+        <div class="col">
+          <span>E-mail</span>
+        </div>
+
+        <div class="col">
+          <input type="email" placeholder="e-mail">
+          <div class="line-active green-b"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <span>Пароль</span>
+        </div>
+
+        <div class="col">
+          <input type="password" placeholder="пароль">
+          <div class="line-active green-b"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <span>Повторите пароль</span>
+        </div>
+
+        <div class="col">
+          <input type="password" placeholder="повтор пароля">
+          <div class="line-active green-b"></div>
+        </div>
+      </div>
+
+      <div class="col-max">
+        <label for="registration-submit">
+        <div class="but">
+          <span>Зарегестрироваться</span>
+          <div class="line purple-b"></div>
+        </div>
+        </label>
+      </div>
+      <button type="submit" id="registration-submit"></button>
+    </form>
+
+    <hr>
+    <div id="form-footer">
+      <a [routerLink]="['/donat']">
+        <i class="fa fa-info-circle" aria-hidden="true"></i> О проекте
+      </a>
+      <a [routerLink]="['/blog']">
+        <i class="fa fa-book" aria-hidden="true"></i> Блог
+      </a>
+      <a [routerLink]="['/donat']">
+        <i class="fa fa-credit-card-alt" aria-hidden="true"></i> Donat
+      </a>
+    </div>
+  </div>
+  <div id="slider"></div>
+</div>

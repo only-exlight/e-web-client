@@ -1,0 +1,24 @@
+<div class="viewer-container">
+  <div class="head">
+    <div>
+      <span>Группы</span>
+      <div class="line line-active light-green-b"></div>
+    </div>
+  </div>
+
+  <div class="viewer-menu">
+    <div class="but">
+      <a [routerLink]="['/main',{outlets:{viewer:['groups',{outlets:{group_outlet:['all']}}]}}]" routerLinkActive #all="routerLinkActive">Все</a>
+      <div class="line blue-b" [ngClass]="{ 'line-active': all.isActive }"></div>
+    </div>
+    <div class="but">
+      <a [routerLink]="['/main',{outlets:{viewer:['groups',{outlets:{group_outlet:['my']}}]}}]" routerLinkActive #my="routerLinkActive">Мои группы</a>
+      <div class="line green-b" [ngClass]="{ 'line-active': my.isActive }"></div>
+    </div>
+    <div class="but">
+      <a [routerLink]="['/main',{outlets:{viewer:['groups',{outlets:{group_outlet:['create']}}]}}]" routerLinkActive #create="routerLinkActive">Создать группу</a>
+      <div class="line purple-b" [ngClass]="{ 'line-active': create.isActive }"></div>
+    </div>
+  </div>
+  <router-outlet name="group_outlet"></router-outlet>
+</div>

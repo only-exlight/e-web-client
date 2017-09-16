@@ -1,0 +1,162 @@
+/*BACKGROUND CSS*/
+.red-b {
+    background: #b71c1c
+}
+
+.deep-orange-b {
+    background: #FF5722
+}
+
+.amber-b {
+    background: #FFC107;
+}
+
+.yellow-b {
+    background: #FFEB3B
+}
+
+.light-green-b {
+    background: #8BC34A;
+}
+
+.green-b {
+    background: #4CAF50
+}
+
+.blue-b {
+    background: #2196F3
+}
+
+.indigo-b {
+    background: #3F51B5;
+}
+
+.deep-purple-b {
+    background: #673AB7;
+}
+
+.purple-b {
+    background: #9C27B0
+}
+
+/*TEXT COLOR*/
+.red-t {
+    color: #b71c1c
+}
+
+.deep-orange-t {
+    color: #FF5722
+}
+
+.amber-t {
+    color: #FFC107;
+}
+
+.yellow-t {
+    color: #FFEB3B
+}
+
+.light-green-t {
+    color: #8BC34A;
+}
+
+.green-t {
+    color: #4CAF50
+}
+
+.indigo-b {
+    color: #3F51B5;
+}
+
+.blue-t {
+    color: #2196F3
+}
+
+.deep-purple-t {
+    color: #673AB7;
+}
+
+.purple-t {
+    color: #9C27B0
+}
+
+/*TEXT HOVER*/
+.red-t-h {
+    color: #000
+}
+
+.red-t-h:hover {
+    color: #b71c1c
+}
+
+.deep-orange-t-h {
+    color: #000
+}
+
+.deep-orange-t-h:hover {
+    color: #FF5722
+}
+
+.amber-t-h {
+    color: #000
+}
+
+.amber-t-h:hover {
+    color: #FFC107;
+}
+
+.yellow-t-h {
+    color: #000
+}
+
+.yellow-t-h:hover {
+    color: #FFEB3B
+}
+
+.light-green-t-h {
+    color: #000
+}
+
+.light-green-t-h:hover {
+    color: #8BC34A
+}
+
+.green-t-h {
+    color: #000
+}
+
+.green-t-h:hover {
+    color: #4CAF50
+}
+
+.indigo-t-h {
+    color: #000
+}
+
+.indigo-t-h:hover {
+    color: #3F51B5
+}
+
+.blue-t-h {
+    color: #000
+}
+
+.blue-t-h:hover {
+    color: #2196F3
+}
+
+.deep-purple-t-h {
+    color: #000
+}
+
+.deep-purple-t-h:hover {
+    color: #673AB7
+}
+
+.purple-t-h {
+    color: #000
+}
+
+.purple-t-h:hover {
+    color: #9C27B0
+}

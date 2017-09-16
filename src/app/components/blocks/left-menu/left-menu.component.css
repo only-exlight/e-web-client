@@ -1,0 +1,59 @@
+/*LEFT MENU CSS STYLES*/
+#left-menu {
+    width: 65px;
+    height: 100%;
+    background: #fff;
+    font-size: 22px;
+    font-family: 'Lobster', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 10px #888;
+    font-size: 22px;
+    color: #000;
+}
+
+.left-menu-icon {
+    font-size: 22px;
+    color: #000;
+    padding: 10px 0px 10px 20px;
+    align-self: center;
+}
+
+i { cursor: pointer; }
+
+.left-menu-item {
+    display: flex;
+}
+
+.vert-line {
+    transition: 1s height;
+    height: 46px;
+    width: 3px;
+    border-radius: 5px;
+}
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+
+.shake {
+  animation-name: shake;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+a {
+  transition: 1s color;
+}

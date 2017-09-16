@@ -1,0 +1,24 @@
+<div class="viewer-container">
+  <div class="head">
+    <div>
+      <span>Мероприятия</span>
+      <div class="line line-active blue-b"></div>
+    </div>
+  </div>
+
+  <div class="viewer-menu">
+    <div class="but">
+      <a [routerLink]="['/main',{outlets:{viewer:['events',{outlets:{events_outlet:['all']}}]}}]" routerLinkActive #all="routerLinkActive">Все</a>
+      <div class="line blue-b" [ngClass]="{'line-active':all.isActive}"></div>
+    </div>
+    <div class="but">
+      <a [routerLink]="['/main',{outlets:{viewer:['events',{outlets:{events_outlet:['my']}}]}}]" routerLinkActive #my="routerLinkActive">Мои мероприятия</a>
+      <div class="line green-b" [ngClass]="{'line-active':my.isActive}"></div>
+    </div>
+    <div class="but">
+      <a [routerLink]="['/main',{outlets:{viewer:['events',{outlets:{events_outlet:['create']}}]}}]" routerLinkActive #create="routerLinkActive">Создать мероприятие</a>
+      <div class="line purple-b" [ngClass]="{'line-active':create.isActive}"></div>
+    </div>
+  </div>
+  <router-outlet name="events_outlet"></router-outlet>
+</div>

@@ -1,0 +1,192 @@
+<div class="viewer-container">
+  <div class="head">
+    <div>
+      <span>Редактирование профиля</span>
+      <div class="line line-active red-b"></div>
+    </div>
+  </div>
+
+  <div class="viewer-menu">
+    <div class="but">
+      <a [routerLink]="['/main',{outlets:{viewer:['profile',{outlets:{profile_outlet:['edit-general']}}]}}]" routerLinkActive #general="routerLinkActive">Основные</a>
+      <div class="line blue-b" [ngClass]="{'line-active': general.isActive}"></div>
+    </div>
+    <div class="but">
+      <a [routerLink]="['/main',{outlets:{viewer:['profile',{outlets:{profile_outlet:['edit-contacts']}}]}}]" routerLinkActive #contacts="routerLinkActive">Контакты</a>
+      <div class="line green-b" [ngClass]="{'line-active': contacts.isActive}"></div>
+    </div>
+    <div class="but">
+      <a [routerLink]="['/main',{outlets:{viewer:['profile',{outlets:{profile_outlet:['edit-other']}}]}}]" routerLinkActive #other="routerLinkActive">Разное</a>
+      <div class="line purple-b" [ngClass]="{'line-active': other.isActive}"></div>
+    </div>
+  </div>
+  <router-outlet name="profile_outlet"></router-outlet>
+</div>
+
+  <!--
+  <div id="head">
+    <div id="avatar"></div>
+    <div id="status">
+      <div id="status-message">
+        <div id="online" class="online" title="Online"></div>
+        <span>Все пучком!</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="bl">
+    <div id="view-block" #bl>
+      <div class="info">
+        <h1>Светлана Николаевна Лесная</h1>
+        <div class="info-block">
+          <div class="info-name">О себе</div>
+          <div class="info-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus praesentium accusantium sint nobis iure, ullam
+            vel tempora a, esse neque in suscipit maxime sed molestias dolore placeat. Dolores illum, sunt.</div>
+        </div>
+        <div class="info-block">
+          <div class="info-name">День рождения</div>
+          <div class="info-info">03.02.1993</div>
+        </div>
+        <div class="info-block">
+          <div class="info-name">Место проживания</div>
+          <div class="info-info">Казахстан, Караганда</div>
+        </div>
+        <div class="info-block">
+          <div class="info-name">Телефон</div>
+          <div class="info-info">87471520356</div>
+        </div>
+        <div class="info-block">
+          <div class="info-name">Электронная почта</div>
+          <div class="info-info">example@example.com</div>
+        </div>
+        <div class="info-block">
+          <div class="info-name">Интересы</div>
+          <div class="info-info">Программирование, информационные технологии</div>
+        </div>
+        <div class="info-block">
+          <div class="info-name">Участвую в группах</div>
+          <div class="info-info">JavaScript, Web-Разработка</div>
+        </div>
+        <div class="info-block">
+          <div class="info-name">Участвую в проектах</div>
+          <div class="info-info">Единомышленник</div>
+        </div>
+        <div class="info-block">
+          <div class="info-name">Иду на</div>
+          <div class="info-info">Семинар о програмиировании серверов, Встреча энтузиастов ИИ</div>
+        </div>
+        <div class="info-block">
+          <div class="info-name">Иду на</div>
+          <div class="info-info">Семинар о програмиировании серверов, Встреча энтузиастов ИИ</div>
+        </div>
+        <div class="info-block">
+          <div class="info-name">Иду на</div>
+          <div class="info-info">Семинар о програмиировании серверов, Встреча энтузиастов ИИ</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="edit-block">
+      <div class="editor-block">
+          <div class="editor-name">Ваше имя</div>
+          <div class="editor-editor">
+            <input type="text" placeholder="Имя">
+            <div class="v-line-static"></div>
+          </div>
+        </div>
+        <div class="editor-block">
+          <div class="editor-name">Ваша фамилия</div>
+          <div class="editor-editor">
+            <input type="text" placeholder="Фамилия">
+            <div class="v-line-static"></div>
+          </div>
+        </div>
+        <div class="editor-block">
+          <div class="editor-name">Отчество</div>
+          <div class="editor-editor">
+            <input type="text" placeholder="Отчество">
+            <div class="v-line-static"></div>
+          </div>
+        </div>
+        <div class="editor-block">
+          <div class="editor-name">Дата рождения</div>
+          <div class="editor-editor">
+            <select name="" id="">
+              <option>1</option>
+              <option>2</option>
+            </select>
+            <select name="" id="">
+              <option>Январь</option>
+              <option>Февраль</option>
+              <option>Март</option>
+            </select>
+            <select name="" id="">
+              <option>1995</option>
+              <option>1996</option>
+              <option>1997</option>
+            </select>
+            <div class="v-line-static"></div>
+          </div>
+        </div>
+        <div class="editor-block">
+          <div class="editor-name">Пол</div>
+          <div class="editor-editor">
+            <select name="" id="">
+              <option>Не указан</option>
+              <option>Муж.</option>
+              <option>Жен.</option>
+            </select>
+            <div class="v-line-static"></div>
+          </div>
+        </div>
+        <div class="editor-block">
+          <div class="editor-name">Проживание</div>
+          <div class="editor-editor">
+            <select name="" id="">
+              <option>Казахстан</option>
+              <option>Россия</option>
+              <option>Украина</option>
+            </select>
+            <select name="" id="">
+              <option>Астана</option>
+              <option>Алматы</option>
+              <option>Караганда</option>
+            </select>
+            <div class="v-line-static"></div>
+          </div>
+        </div>
+        <div class="editor-block">
+          <div class="editor-name">Телефон</div>
+          <div class="editor-editor">
+            <input type="text" placeholder="Телефон">
+            <div class="v-line-static"></div>
+          </div>
+        </div>
+        <div class="editor-block">
+          <div class="editor-name">Skype</div>
+          <div class="editor-editor">
+            <input type="text" placeholder="Skype">
+            <div class="v-line-static"></div>
+          </div>
+        </div>
+        <div class="editor-block">
+          <div class="editor-name">О себе</div>
+          <div class="editor-editor">
+            <textarea></textarea>
+            <div class="v-line-static"></div>
+          </div>
+        </div>
+        <div class="editor-block">
+          <div class="editor-name">Интересы</div>
+          <div class="editor-editor">
+            <input type="text" placeholder="Интерсы - начните ввод">
+            <div class="v-line-static"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="edit-button" (click)="bl.style.marginLeft = '-450px'">
+    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    <span>Редактировать</span>
+    <div class="v-line"></div>
+  </div>-->

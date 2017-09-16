@@ -1,0 +1,55 @@
+input {
+    height: 27px;
+    width: 100%;
+    border: none;
+    font-family: 'Lobster', cursive;
+    font-size: 18px;
+}
+
+input:focus {
+    height: 27px;
+    width: 100%;
+    border: none;
+    font-family: 'Lobster', cursive;
+    font-size: 18px;
+    outline: none;
+}
+
+input:focus + .line {
+    width: 100%;
+}
+
+select {
+    height: 27px;
+    width: 100%;
+    border: none;
+    font-family: 'Lobster', cursive;
+    font-size: 18px;
+    background: #fff;
+    color: #888;
+}
+
+select:focus {
+    outline: none;
+}
+
+option {
+    outline: none;
+}
+
+textarea {
+    border: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.row {
+    padding: 10px 0;
+}
+
+.hint {
+    font-style: italic;
+    padding: 10px 40px;
+}

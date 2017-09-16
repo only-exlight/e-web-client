@@ -1,0 +1,22 @@
+<div class="viewer-container">
+  <div class="head">
+    <div>
+      <span>Контакты</span>
+      <div class="line line-active deep-orange-b"></div>
+    </div>
+  </div>
+
+  <div class="viewer-menu">
+    <div class="but">
+      <a [routerLink]="['/main',{outlets:{viewer:['contacts',{outlets:{contacts_outlet:['all']}}]}}]" routerLinkActive #all="routerLinkActive">Все</a>
+      <div class="line blue-b" [ngClass]="{'line-active':all.isActive}"></div>
+    </div>
+    <div class="but">
+      <a [routerLink]="['/main',{outlets:{viewer:['contacts',{outlets:{contacts_outlet:['online']}}]}}]" routerLinkActive #online="routerLinkActive">Онлайн</a>
+      <div class="line green-b" [ngClass]="{'line-active':online.isActive}"></div>
+    </div>
+  </div>
+  
+  <router-outlet name="contacts_outlet"></router-outlet>
+
+</div>
